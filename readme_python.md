@@ -23,7 +23,7 @@ pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-
 
 - e. Download the JSON file containing your Client ID and Secret and save it as "credentials.json" in your working directory.
 
-## 3. Create a Python script named `automated_reply_to_recruiters.py` and copy the following code.
+## 3. Created a Python script named `automated_reply_to_recruiters.py`.
 
 ## 4. Customize the code:
 
