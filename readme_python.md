@@ -9,7 +9,9 @@
 
 ## Step 1: Install the Google Client Library for Python
 
+```sh
 pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+```
 
 ## 2. Set up your project and obtain your Google API credentials
 
@@ -35,7 +37,9 @@ pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-
 
 ## 5. Run the script:
 
-`python automated_reply_to_recruiters.py`
+```sh
+python automated_reply_to_recruiters.py
+```
 
 This script will check your Gmail account for new emails from the specified sender with the required keywords. If the email contains all the required keywords, the script will send an auto-reply and mark the email as read.
 
