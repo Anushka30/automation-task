@@ -41,6 +41,4 @@
 
 ## 6. Grant the required permissions when prompted.
 
-#
-
 Script will automatically check your Gmail account for new emails from the specified sender with the required keywords at the chosen time interval. If the email contains all the required keywords, the script will send an auto-reply and mark the email as read.
