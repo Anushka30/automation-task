@@ -9,7 +9,7 @@ from googleapiclient.errors import HttpError
 
 # If modifying these SCOPES, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/gmail.modify']
-client_secrets_file  = "E:\\Python_Work\\Python_Exercise\\Python_Exercise\\ChatGpt\\Automation\\credentials.json"
+client_secrets_file = '/path/to/credentials.json'
 
 def get_credentials():
     creds = None
@@ -33,7 +33,7 @@ def main():
     service = build('gmail', 'v1', credentials=creds)
 
     try:
-        query = "from:anushka108g@gmail.com is:unread"
+        query = "from:recruiter@example.com is:unread"
         result = service.users().messages().list(userId='me', q=query).execute()
         messages = result.get('messages', [])
 
@@ -42,7 +42,7 @@ def main():
             msg_str = base64.urlsafe_b64decode(msg['raw'].encode('ASCII'))
             text = msg_str.decode()
 
-            REQUIRED_KEYWORDS = ['Python', 'Developer', 'MLOPS']
+            REQUIRED_KEYWORDS =  ["keyword1", "keyword2", "keyword3"]
             if all(keyword.lower() in text.lower() for keyword in REQUIRED_KEYWORDS):
                 AUTO_REPLY_MESSAGE = 'Thank you for reaching out to me. I am currently exploring new opportunities and would be interested in discussing the role further.'
                 # Get the email address of the sender (recruiter)
